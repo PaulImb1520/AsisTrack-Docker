@@ -1,0 +1,26 @@
+.loginPanel-container {
+  width: 95%;
+  margin: 0 auto;
+  padding-top: 15%;
+
+  @media (min-width: 700px) {
+    width: 32%;
+  }
+}
+
+.loginPanel {
+  height: 25rem;
+}
+
+.logTitle {
+  text-align: center;
+}
+
+.logSubTitle {
+  padding-top: 5%;
+}
+
+.loginButton {
+  margin-top: 3rem;
+  padding-inline: 100px;
+}

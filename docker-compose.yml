@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - django-api
+
+  django-db:
+    extends:
+      file: ./backend/docker-compose.yml
+      service: django-db
+
+  django-pgadmin:
+    extends:
+      file: ./backend/docker-compose.yml
+      service: django-pgadmin
+
+  django-api:
+    extends:
+      file: ./backend/docker-compose.yml
+      service: django-api
+
+volumes:
+  pg-data:
+    name: django42-docker-template-main_pg-data
+    external: true
+  pgadmin-data:
+    name: django42-docker-template-main_pgadmin-data
+    external: true
