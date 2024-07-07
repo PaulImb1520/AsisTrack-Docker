@@ -20,5 +20,5 @@ from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("api/", include("asistrack_api.urls")),
+    path('api/', include('asistrack_api.urls')),
 ]
