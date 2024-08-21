@@ -1,7 +1,7 @@
 .loginPanel-container {
   width: 95%;
   margin: 0 auto;
-  padding-top: 15%;
+  padding-top: 8%;
 
   @media (min-width: 700px) {
     width: 32%;
@@ -9,11 +9,12 @@
 }
 
 .loginPanel {
-  height: 25rem;
+  height: 40rem;
 }
 
 .logTitle {
   text-align: center;
+  padding-bottom: 16px;
 }
 
 .logSubTitle {
@@ -23,4 +24,17 @@
 .loginButton {
   margin-top: 3rem;
   padding-inline: 100px;
+}
+
+.spinner-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1000;
 }

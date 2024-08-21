@@ -6,3 +6,62 @@
 .reportInput {
   width: 100%;
 }
+
+.lblInfo {
+  text-align: right;
+  padding-right: 3%;
+}
+
+.tableDetailButton {
+  margin-top: -5px;
+}
+
+/*Estilos del modal*/
+
+.modalTitle {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.modal-body {
+  font-size: 16px;
+  padding-top: 16px;
+  padding-bottom: 40px;
+}
+
+.col-title {
+  font-weight: 600;
+}
+
+.row {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.col-right {
+  text-align: right;
+}
+
+.col-center {
+  text-align: center;
+}
+
+.col-payment-title {
+  font-size: 22px;
+}
+
+/*Estilos para teléfono*/
+
+@media (max-width: 700px) {
+  .lblInfo {
+    text-align: left;
+    padding-top: 8px;
+  }
+  .rs-row {
+    padding-top: 16px;
+  }
+  .consultarButton {
+    margin-top: 16px;
+  }
+}
