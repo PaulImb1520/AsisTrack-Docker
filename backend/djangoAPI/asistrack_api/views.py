@@ -1,4 +1,3 @@
-from django.shortcuts import render
 import requests
 from requests.auth import HTTPDigestAuth
 from django.http import JsonResponse
@@ -23,7 +22,7 @@ from django.contrib.auth.hashers import check_password
 @csrf_exempt
 @require_POST
 def fetch_device_data(request):
-    url = "https://192.168.200.102/ISAPI/AccessControl/LocalAttendance/SearchSummarySheet?format=json"
+    url = "https://192.168.200.101/ISAPI/AccessControl/LocalAttendance/SearchSummarySheet?format=json"
 
     auth = HTTPDigestAuth("admin", "uio01matriz")
     current_month = datetime.now().strftime("%Y-%m")
@@ -52,7 +51,7 @@ def fetch_device_data(request):
 @csrf_exempt
 @require_POST
 def fetch_device_data_with_date(request, year, month):
-    url = "https://192.168.200.102/ISAPI/AccessControl/LocalAttendance/SearchSummarySheet?format=json"
+    url = "https://192.168.200.101/ISAPI/AccessControl/LocalAttendance/SearchSummarySheet?format=json"
     auth = HTTPDigestAuth("admin", "uio01matriz")
     formatted_month = f"{year}-{month:02d}"
     search_result_position = 1
